@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Aventura do Saber!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <h1>🌟 A Aventura do Saber!</h1>
+    <p>Responda corretamente e ajude o aventureiro!</p>
+  </header>
+
+  <main class="container">
+    <section class="painel">
+      <div class="informacoes">
+        <span>⭐ Pontos: <strong id="pontos">0</strong></span>
+        <span>🚩 Etapa: <strong id="etapa">1</strong>/5</span>
+      </div>
+
+      <div class="trilha" id="trilha">
+        <div class="paisagem">🌳 🌼 🌳 🌷 🌳</div>
+        <div class="caminho"></div>
+        <div class="personagem" id="personagem">🧑‍🚀</div>
+        <div class="obstaculo" id="obstaculo">🪨</div>
+        <div class="chegada">🏁</div>
+      </div>
+
+      <p id="mensagem" class="mensagem" aria-live="polite">
+        Prepare-se para a aventura!
+      </p>
+
+      <section id="telaInicio" class="tela">
+        <h2>Vamos começar? 🚀</h2>
+        <p>Responda às perguntas de Matemática para superar os obstáculos.</p>
+        <button id="btnIniciar">Começar aventura!</button>
+      </section>
+
+      <section id="telaPergunta" class="tela escondida">
+        <h2 id="pergunta">Qual é a resposta?</h2>
+        <div id="alternativas" class="alternativas"></div>
+        <p id="feedback" aria-live="polite"></p>
+      </section>
+
+      <section id="telaFinal" class="tela escondida">
+        <h2>🏆 Aventura concluída!</h2>
+        <p id="resultadoFinal"></p>
+        <button id="btnReiniciar">Jogar novamente 🔄</button>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Aprender também é uma aventura! 📚</p>
+  </footer>
+</body>
+</html>
