@@ -1,0 +1,209 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(#a8e6ff, #e8f9dc);
+  color: #263653;
+  min-height: 100vh;
+}
+
+.topo {
+  text-align: center;
+  padding: 24px 12px;
+  background: #6246c7;
+  color: white;
+}
+
+.topo h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+}
+
+.topo p {
+  margin: 0;
+}
+
+.container {
+  width: min(900px, 94%);
+  margin: 25px auto;
+}
+
+.painel {
+  background: white;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 8px 0 #c5d8e5;
+}
+
+.informacoes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.trilha {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: linear-gradient(#83d8ff 0 65%, #85d96b 65%);
+  border: 3px solid #5cae54;
+}
+
+.paisagem {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+}
+
+.caminho {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background: #d9b17a;
+  border-top: 5px dashed #f9e0a5;
+}
+
+.personagem,
+.obstaculo,
+.chegada {
+  position: absolute;
+  bottom: 58px;
+  z-index: 2;
+  font-size: 2.7rem;
+  transition: left 0.7s ease;
+}
+
+.personagem {
+  left: 5%;
+}
+
+.obstaculo {
+  left: 55%;
+}
+
+.chegada {
+  left: 87%;
+}
+
+.mensagem {
+  text-align: center;
+  font-weight: bold;
+  min-height: 26px;
+  margin: 18px 0;
+}
+
+.tela {
+  text-align: center;
+  padding: 15px 5px;
+}
+
+.tela h2 {
+  color: #6246c7;
+}
+
+.escondida {
+  display: none !important;
+}
+
+button {
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 22px;
+  background: #ffb703;
+  color: #302500;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #d18b00;
+  transition: transform 0.15s, background 0.15s;
+}
+
+button:hover {
+  background: #ffd166;
+  transform: translateY(-2px);
+}
+
+button:focus-visible {
+  outline: 3px solid #263653;
+  outline-offset: 4px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.alternativas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.alternativas button {
+  background: #73d2de;
+  box-shadow: 0 4px 0 #339eac;
+  overflow-wrap: anywhere;
+}
+
+.alternativas button.correta {
+  background: #8be28b;
+  box-shadow: 0 4px 0 #42a642;
+}
+
+.alternativas button.errada {
+  background: #ff9999;
+  box-shadow: 0 4px 0 #d95757;
+}
+
+#feedback {
+  min-height: 28px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+}
+
+@media (max-width: 480px) {
+  .painel {
+    padding: 12px;
+  }
+
+  .trilha {
+    height: 200px;
+  }
+
+  .alternativas {
+    grid-template-columns: 1fr;
+  }
+
+  .personagem,
+  .obstaculo,
+  .chegada {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
